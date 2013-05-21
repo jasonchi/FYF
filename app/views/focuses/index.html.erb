@@ -1,0 +1,31 @@
+<h1>Listing focuses</h1>
+
+<table>
+  <tr>
+    <th>Content</th>
+    <th>User</th>
+    <th>Focus at</th>
+    <th>Position</th>
+    <th>Note</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @focuses.each do |focus| %>
+  <tr>
+    <td><%= focus.content %></td>
+    <td><%= focus.user_id %></td>
+    <td><%= focus.focus_at %></td>
+    <td><%= focus.position %></td>
+    <td><%= focus.note %></td>
+    <td><%= link_to 'Show', focus %></td>
+    <td><%= link_to 'Edit', edit_focus_path(focus) %></td>
+    <td><%= link_to 'Destroy', focus, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Focus', new_focus_path %>

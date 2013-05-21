@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Content:</b>
+  <%= @focus.content %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @focus.user_id %>
+</p>
+
+<p>
+  <b>Focus at:</b>
+  <%= @focus.focus_at %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @focus.position %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%= @focus.note %>
+</p>
+
+
+<%= link_to 'Edit', edit_focus_path(@focus) %> |
+<%= link_to 'Back', focuses_path %>
