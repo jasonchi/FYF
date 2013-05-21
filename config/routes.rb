@@ -1,4 +1,7 @@
 FyF::Application.routes.draw do
+  match 'home/index'=>"home#index", as: 'home'
+  match 'home/about'=>"home#about", as: 'about'
+  match 'home/help'  =>"home#help"   , as: 'help'
   resources :focuses
   resources :users
 
@@ -52,7 +55,7 @@ FyF::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+ root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 
